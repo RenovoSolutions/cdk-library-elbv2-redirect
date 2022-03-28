@@ -1,8 +1,9 @@
 {
-  "name": "cdk-library-elbv2-redirect",
+  "name": "@renovosolutions/cdk-library-elbv2-redirect",
+  "description": "AWS CDK Construct Library to help create redirects on AWS application load balancers",
   "repository": {
     "type": "git",
-    "url": "git@github.com:RenovoSolutions/cdk-library-elbv2-redirect.git"
+    "url": "https://github.com/RenovoSolutions/cdk-library-elbv2-redirect.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -12,11 +13,15 @@
     "compile": "npx projen compile",
     "default": "npx projen default",
     "docgen": "npx projen docgen",
+    "eject": "npx projen eject",
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
+    "package:dotnet": "npx projen package:dotnet",
     "package:js": "npx projen package:js",
+    "package:python": "npx projen package:python",
     "post-compile": "npx projen post-compile",
+    "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
     "test": "npx projen test",
@@ -29,8 +34,8 @@
     "projen": "npx projen"
   },
   "author": {
-    "name": "Brandon Miller",
-    "email": "brandon@digital-reboot.com",
+    "name": "Renovo Solutions",
+    "email": "webmaster+cdk@renovo1.com",
     "organization": false
   },
   "devDependencies": {
@@ -38,7 +43,7 @@
     "@types/node": "^12",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "aws-cdk-lib": "2.1.0",
+    "aws-cdk-lib": "2.17.0",
     "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
@@ -49,6 +54,7 @@
     "jsii": "^1.55.1",
     "jsii-diff": "^1.55.1",
     "jsii-docgen": "^6.2.4",
+    "jsii-pacmak": "^1.55.1",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
     "projen": "^0.53.15",
@@ -57,16 +63,23 @@
     "typescript": "^4.6.3"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.17.0",
     "constructs": "^10.0.5"
   },
   "keywords": [
-    "cdk"
+    "aws-cdk",
+    "aws-cdk-construct",
+    "cdk",
+    "projen"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
+    "timers": "fake",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
       "<rootDir>/(test|src)/**/?(*.)+(spec|test).ts?(x)"
@@ -77,6 +90,7 @@
       "json",
       "lcov",
       "clover",
+      "cobertura",
       "text"
     ],
     "coverageDirectory": "coverage",
@@ -109,7 +123,16 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "renovosolutions.aws-cdk-aws-ipam",
+        "module": "ipam"
+      },
+      "dotnet": {
+        "namespace": "renovosolutions",
+        "packageId": "Renovo.AWSCDK.AWSIPAM"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"
