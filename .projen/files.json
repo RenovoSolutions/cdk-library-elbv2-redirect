@@ -8,6 +8,7 @@
     ".github/workflows/release.yml",
     ".github/workflows/stale.yml",
     ".github/workflows/upgrade-master.yml",
+    ".github/workflows/upgrade-projen-master.yml",
     ".gitignore",
     ".mergify.yml",
     ".projen/deps.json",
