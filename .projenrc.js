@@ -2,7 +2,7 @@ const { awscdk, javascript } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '2.25.0',
+  cdkVersion: '2.26.0',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-elbv2-redirect',
   description: 'AWS CDK Construct Library to help create redirects on AWS application load balancers',
