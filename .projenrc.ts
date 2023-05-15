@@ -3,7 +3,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '2.78.0',
+  cdkVersion: '2.79.1',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-elbv2-redirect',
   description: 'AWS CDK Construct Library to help create redirects on AWS application load balancers',
