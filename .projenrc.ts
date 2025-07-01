@@ -3,7 +3,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '2.86.0',
+  cdkVersion: '2.202.0',
+  jsiiVersion: '^5.8.0',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-elbv2-redirect',
   description: 'AWS CDK Construct Library to help create redirects on AWS application load balancers',
@@ -66,16 +67,18 @@ const project = new awscdk.AwsCdkConstructLibrary({
   docgen: true,
   eslint: true,
   publishToPypi: {
-    distName: 'renovosolutions.aws-cdk-aws-ipam',
-    module: 'ipam',
+    distName: 'renovosolutions.aws_cdk_elbv2_redirect',
+    module: 'renovosolutions_elbv2_redirect',
   },
-  publishToNuget: { // Currently seems to be broken. Jsii seems to incorrectly convert the CfnIPAMPool to CfnIpamPool
+  publishToNuget: {
     dotNetNamespace: 'renovosolutions',
-    packageId: 'Renovo.AWSCDK.AWSIPAM',
+    packageId: 'Renovo.AWSCDK.Elbv2Redirect',
   },
   jestOptions: {
     jestConfig: {
-      timers: 'fake',
+      fakeTimers: {
+        enableGlobally: true,
+      },
     },
   },
   gitignore: ['**/__pycache__/**'],
